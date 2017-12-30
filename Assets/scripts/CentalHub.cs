@@ -29,6 +29,7 @@ public class CentalHub : MonoBehaviour {
     }
     private void Awake()
     {
+       // Time.timeScale = 2;
         instance = this;
     }
 

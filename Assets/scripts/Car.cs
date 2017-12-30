@@ -28,12 +28,12 @@ public class Car : MonoBehaviour {
             isRequiring = value;
             if (value)
             {
-                this.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+                //this.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
                // materialBall.color = Color.red;
             }
             else
             {
-                this.GetComponentInChildren<MeshRenderer>().material.color = Color.green;
+               // this.GetComponentInChildren<MeshRenderer>().material.color = Color.green;
               //  materialBall.color = Color.green;
 
 
@@ -120,9 +120,10 @@ public class Car : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        print("触发");
         if (other.tag=="Player"&&isApproval==false)//前面的车停下时，本车停再后方.已经被批准时无视后方车
         {
+            print("");
           //  print("car peng car");
             norVelocity = 0;
            // print("the front stop");
